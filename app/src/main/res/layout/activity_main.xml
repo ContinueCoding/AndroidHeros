@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.huoxy.androidheros.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_chapter_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="第3章 - Android控件及自定义控件"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/btn_chapter_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="第4章 - ListView使用技巧"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_chapter_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="第5章 - Android Scroll分析"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_chapter_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="第6章 - Android绘图机制及技巧"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_chapter_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="第7章 - Android动画机制及技巧"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_chapter_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="第9章 - Android系统信息及安全机制"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/tools_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Test"
+                android:textColor="#ff0000"
+                android:textSize="22sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
