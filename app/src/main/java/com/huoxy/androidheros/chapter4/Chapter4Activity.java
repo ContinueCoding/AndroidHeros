@@ -2,8 +2,10 @@ package com.huoxy.androidheros.chapter4;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.ListView;
@@ -24,6 +26,12 @@ public class Chapter4Activity extends AppCompatActivity implements View.OnClickL
     private ViewHolderAdapter adapter;
     private int lastVisibleItemPosition = 0;
 
+    //监听上下滑动
+    private int mFirstY = 0;
+    private int mCurrentY = 0;
+    private int direction = 0;
+    private boolean mShow = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +42,18 @@ public class Chapter4Activity extends AppCompatActivity implements View.OnClickL
         setListeners();
 
         initData();
+
+        int scaledEdgeSlop = ViewConfiguration.get(this).getScaledEdgeSlop();//36
+        int scaledTouchSlop = ViewConfiguration.get(this).getScaledTouchSlop();//24
+        int scaledDoubleTapSlop = ViewConfiguration.get(this).getScaledDoubleTapSlop();//300
+        int scaledPagingTouchSlop = ViewConfiguration.get(this).getScaledPagingTouchSlop();//48
+        int scaledWindowTouchSlop = ViewConfiguration.get(this).getScaledWindowTouchSlop();//48
+
+        Log.i("Slop", "1 - " + scaledEdgeSlop +
+                        "\n 2 - " + scaledTouchSlop +
+                        "\n 3 - " + scaledDoubleTapSlop +
+                        "\n 4 - " + scaledPagingTouchSlop +
+                        "\n 5 - " + scaledWindowTouchSlop);
     }
 
     private void initViews() {
@@ -51,7 +71,7 @@ public class Chapter4Activity extends AppCompatActivity implements View.OnClickL
         emptyView.setOnClickListener(this);
 
         //ListView滑动监听方式一: 根据不同ACTION的坐标判断滑动方向
-        /*listView.setOnTouchListener(new View.OnTouchListener() {
+        listView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()){
@@ -67,7 +87,7 @@ public class Chapter4Activity extends AppCompatActivity implements View.OnClickL
                 }
                 return false;
             }
-        });*/
+        });
 
         //ListView滑动监听方式二:
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
