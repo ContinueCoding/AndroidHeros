@@ -5,10 +5,12 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.huoxy.androidheros.chapter3.Chapter3Activity;
 import com.huoxy.androidheros.chapter4.Chapter4Activity;
+import com.huoxy.androidheros.chapter5.Chapter5Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_chapter_5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Chapter3Activity.class));
+                startActivity(new Intent(MainActivity.this, Chapter5Activity.class));
             }
         });
 
@@ -61,7 +63,11 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_chapter_9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Chapter3Activity.class));
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+                sendIntent.setType("text/plain");
+                startActivity(Intent.createChooser(sendIntent, "哈哈哈哈哈哈"));
             }
         });
 

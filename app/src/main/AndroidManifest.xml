@@ -32,7 +32,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".chapter3.Chapter3Activity" />
-        <activity android:name=".chapter4.Chapter4Activity"></activity>
+        <activity android:name=".chapter4.Chapter4Activity" />
+        <activity android:name=".chapter5.Chapter5Activity"></activity>
     </application>
 
 </manifest>
