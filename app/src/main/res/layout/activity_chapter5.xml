@@ -6,9 +6,30 @@
     android:orientation="vertical"
     tools:context="com.huoxy.androidheros.chapter5.Chapter5Activity">
 
-    <com.huoxy.androidheros.chapter5.DragView1
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="#0ff"
-        />
+    <com.huoxy.androidheros.chapter5.DragViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="Menu"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textSize="20sp"
+            android:textColor="#f00"
+            android:background="#0ff"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Main"
+            android:gravity="center"
+            android:padding="20dp"
+            android:textSize="20sp"
+            android:textColor="#0f0"
+            android:background="#f0f"
+            />
+    </com.huoxy.androidheros.chapter5.DragViewGroup>
 </LinearLayout>
