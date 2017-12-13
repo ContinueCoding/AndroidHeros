@@ -11,6 +11,7 @@ import com.huoxy.androidheros.chapter3.Chapter3Activity;
 import com.huoxy.androidheros.chapter4.Chapter4Activity;
 import com.huoxy.androidheros.chapter5.Chapter5Activity;
 import com.huoxy.androidheros.chapter6.Chapter6Activity;
+import com.huoxy.androidheros.chapter7.Chapter7Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_chapter_7).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Chapter3Activity.class));
+                startActivity(new Intent(MainActivity.this, Chapter7Activity.class));
             }
         });
 
