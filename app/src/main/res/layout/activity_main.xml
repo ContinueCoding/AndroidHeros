@@ -57,6 +57,14 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/btn_chapter_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="第8章 - Activity相关"
+                android:textAllCaps="false" />
+
+            <Button
                 android:id="@+id/btn_chapter_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
