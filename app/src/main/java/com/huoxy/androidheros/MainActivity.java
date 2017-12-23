@@ -14,6 +14,7 @@ import com.huoxy.androidheros.chapter5.Chapter5Activity;
 import com.huoxy.androidheros.chapter6.Chapter6Activity;
 import com.huoxy.androidheros.chapter7.Chapter7Activity;
 import com.huoxy.androidheros.chapter8.Chapter8Activity;
+import com.huoxy.androidheros.chapter9.Chapter9Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,11 +75,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_chapter_9).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-                sendIntent.setType("text/plain");
-                startActivity(Intent.createChooser(sendIntent, "哈哈哈哈哈哈"));
+                startActivity(new Intent(MainActivity.this, Chapter9Activity.class));
             }
         });
 
