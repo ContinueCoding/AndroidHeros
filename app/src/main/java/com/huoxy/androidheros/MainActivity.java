@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.huoxy.androidheros.cache.CacheActivity;
+import com.huoxy.androidheros.chapter10.Chapter10Activity;
 import com.huoxy.androidheros.chapter3.Chapter3Activity;
 import com.huoxy.androidheros.chapter4.Chapter4Activity;
 import com.huoxy.androidheros.chapter5.Chapter5Activity;
@@ -76,6 +78,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, Chapter9Activity.class));
+            }
+        });
+
+        //第10章 Android性能优化
+        findViewById(R.id.btn_chapter_10).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Chapter10Activity.class));
+            }
+        });
+
+        //第10章 Android性能优化
+        findViewById(R.id.btn_cache).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CacheActivity.class));
             }
         });
 

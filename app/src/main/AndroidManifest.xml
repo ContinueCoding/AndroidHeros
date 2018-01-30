@@ -37,7 +37,9 @@
         <activity android:name=".chapter6.Chapter6Activity" />
         <activity android:name=".chapter7.Chapter7Activity" />
         <activity android:name=".chapter8.Chapter8Activity" />
-        <activity android:name=".chapter9.Chapter9Activity"></activity>
+        <activity android:name=".chapter9.Chapter9Activity" />
+        <activity android:name=".chapter10.Chapter10Activity" />
+        <activity android:name=".cache.CacheActivity"></activity>
     </application>
 
 </manifest>

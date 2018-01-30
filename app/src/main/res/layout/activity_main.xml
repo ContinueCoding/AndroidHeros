@@ -72,6 +72,22 @@
                 android:text="第9章 - Android系统信息及安全机制"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btn_chapter_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="第10章 - Android性能优化"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="附 - Android Cache（LruCache、DiskLruCache）"
+                android:textAllCaps="false" />
+
             <TextView
                 android:id="@+id/tools_test"
                 android:layout_width="wrap_content"
