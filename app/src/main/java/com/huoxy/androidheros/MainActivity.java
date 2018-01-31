@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.huoxy.androidheros.cache.CacheActivity;
 import com.huoxy.androidheros.chapter10.Chapter10Activity;
+import com.huoxy.androidheros.chapter11.BmobActivity;
 import com.huoxy.androidheros.chapter3.Chapter3Activity;
 import com.huoxy.androidheros.chapter4.Chapter4Activity;
 import com.huoxy.androidheros.chapter5.Chapter5Activity;
@@ -89,13 +90,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //第10章 Android性能优化
+        //第11章 Baas - Bmob
+        findViewById(R.id.btn_chapter_11).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BmobActivity.class));
+            }
+        });
+
+        //第X章 Android Cache
         findViewById(R.id.btn_cache).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, CacheActivity.class));
             }
         });
+
+
 
         //handleAppLinkIntent(getIntent());
         Log.i("MainActivity", "onNewIntent() ------ ");
